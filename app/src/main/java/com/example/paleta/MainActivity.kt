@@ -61,8 +61,10 @@ class MainActivity: AppCompatActivity() {
             this@MainActivity.tvGreen.text = green.toString()
             this@MainActivity.tvBlue.text = blue.toString()
 
+            this@MainActivity.llResultado.setBackgroundColor(this@MainActivity.criarCor())
+
             fun hexadec(): String{
-                var hexa = "##"+Integer.toHexString(Color.rgb(red, green, blue)).substring(2).toUpperCase()+"##"
+                var hexa = "#"+Integer.toHexString(Color.rgb(red, green, blue)).substring(2).toUpperCase()
                 return hexa
             }
             this@MainActivity.tvResultado.text = hexadec()
