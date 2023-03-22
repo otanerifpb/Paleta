@@ -36,7 +36,7 @@ class MainActivity: AppCompatActivity() {
 
         this.llResultado = findViewById(R.id.llResultado)
 
-        this.llResultado.setBackgroundColor(criarCor())
+        //this.llResultado.setBackgroundColor(criarCor())
         this.sbRed.setOnSeekBarChangeListener(MudarCor())
         this.sbGreen.setOnSeekBarChangeListener(MudarCor())
         this.sbBlue.setOnSeekBarChangeListener(MudarCor())
@@ -64,7 +64,7 @@ class MainActivity: AppCompatActivity() {
             this@MainActivity.llResultado.setBackgroundColor(this@MainActivity.criarCor())
 
             fun hexadec(): String{
-                var hexa = "#"+Integer.toHexString(Color.rgb(red, green, blue)).substring(2).toUpperCase()
+                var hexa = "##"+Integer.toHexString(Color.rgb(red, green, blue)).substring(2).toUpperCase()
                 return hexa
             }
             this@MainActivity.tvResultado.text = hexadec()
